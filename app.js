@@ -1,14 +1,25 @@
 const express = require('express'),
       app = express(),
       mongoose = require("mongoose"),
-      bodyParser = require('body-parser');
+      passport    = require("passport"),
+      bodyParser = require('body-parser'),
       
+      User        = require("./models/user");
+      
+      
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+      
+const url = 'mongodb+srv://rohit:M2jUJnZfZzPLUKdP@cluster0-oxx5j.mongodb.net/fpl?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb+srv://rohit:YRlBGdzruS3k7p5A@fpl-oxx5j.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(url, {
     useNewUrlParser: true,
-    useCreateIndex: true
-}).then(()=> {
-    console.log('connected to db');
+    useCreateIndex: true,
+    useUnifiedTopology: true
+    
+}).then((db, err)=> {
+	  
+    console.log('connected to db!');
     
 }).catch(err => {
     console.log(err);
@@ -16,14 +27,22 @@ mongoose.connect('mongodb+srv://rohit:YRlBGdzruS3k7p5A@fpl-oxx5j.mongodb.net/tes
 });
 
 
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
 
 //routes
 app.get('/', (req, res) => {
-  res.render('landing');
+	
+	User.find({	
+		
+	}).then((users, err) => {
+			res.render('landing', {users});
+		
+	}).catch(err => {
+		console.log(err);
+	})
+	
 });
 
+	
 
 
 
