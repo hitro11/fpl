@@ -6,3 +6,29 @@ table {
     margin: 50px 0;
 }
 
+
+.sign-up-link {
+    color: white;
+    margin: 0 1em;
+}
+
+.page-title {
+    margin: 1.5em 0;
+}
+
+/*form*/
+form {
+    margin: 2em 0;
+}
+
+
+.signup-form {
+    border: 1px solid;
+    padding: 2em 3em;
+    /*margin: auto;*/
+    
+}
+
+.form-row {
+    padding: 1.5em 0;
+}
