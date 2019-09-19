@@ -10,4 +10,4 @@ var TeamSchema = new mongoose.Schema({
 
 TeamSchema.plugin(passportLocalMongoose);
 
-module.exports = mongoose.model("User", TeamSchema);
+module.exports = mongoose.model("Team", TeamSchema);

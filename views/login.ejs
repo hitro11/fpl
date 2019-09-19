@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<div class="container">
+	
+	<h1 class="page-title text-center">Login</h1>
+	
+	<div class="d-flex justify-content-center">
+		<form class="signup-form" action="/login" method="post">
+			<div class="form-row">
+	      <label for="username">Username</label>
+	      <input type="text" class="form-control" name="username" id="username" placeholder="username">
+	    </div>
+	    <div class="form-row">
+	      <label for="password">Password</label>
+	      <input type="password" class="form-control" name="password" id="username" placeholder="password">
+	    </div>
+	    <div class="form-row">
+	    	<button class="btn btn-primary" type="submit">Login</button>
+	    </div>
+		</form>
+	</div>
+
+
+	
+</div>
+
+<% include partials/footer %>
+
+
+

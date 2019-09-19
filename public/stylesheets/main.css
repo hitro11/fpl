@@ -6,10 +6,16 @@ table {
     margin: 50px 0;
 }
 
+.button {
+    padding: 0.5em;
+    border-radius: 0.4em;
+}
 
-.sign-up-link {
+
+.register-link {
     color: white;
     margin: 0 1em;
+    font-size: small;
 }
 
 .page-title {
@@ -18,7 +24,7 @@ table {
 
 /*form*/
 form {
-    margin: 2em 0;
+    margin: 1.5em 0;
 }
 
 
